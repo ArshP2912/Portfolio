@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Arsh Patel - AI & Business Professional Portfolio">
+    <title>Arsh Patel | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">AP</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#resume" class="nav-link">Resume</a></li>
+            </ul>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="theme-icon">🌙</span>
+            </button>
+            <button class="admin-btn" id="adminBtn" aria-label="Admin panel" title="Admin Panel">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <h1 class="hero-name" id="heroName" data-animate="fade-up"></h1>
+                <p class="hero-title" id="heroTitle" data-animate="fade-up" data-delay="100"></p>
+                <p class="hero-summary" id="heroSummary" data-animate="fade-up" data-delay="200"></p>
+                <div class="hero-buttons" data-animate="fade-up" data-delay="300">
+                    <a href="Assets/resume/resume.pdf" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        Download Resume
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-photo" data-animate="fade-up" data-delay="200">
+                <div class="hero-photo-ring">
+                    <img
+                        src="Assets/images/profile.jpg"
+                        alt="Portrait of Arsh Patel"
+                        class="hero-photo-img"
+                    />
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">About Me</h2>
+            <div class="about-content" id="aboutContent" data-animate="fade-up" data-delay="100">
+                <!-- Content will be dynamically inserted from script.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Projects</h2>
+            <div class="projects-controls" data-animate="fade-up" data-delay="100">
+                <div class="search-box">
+                    <input type="text" id="projectSearch" placeholder="Search projects..." aria-label="Search projects">
+                </div>
+                <div class="filter-chips" id="filterChips">
+                    <!-- Filter chips will be dynamically inserted here -->
+                </div>
+            </div>
+            <div class="projects-grid" id="projectsGrid" data-animate="fade-up" data-delay="200">
+                <!-- Projects will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Skills</h2>
+            <div class="skills-grid" id="skillsGrid" data-animate="fade-up" data-delay="100">
+                <!-- Skills will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Experience</h2>
+            <div class="timeline" id="experienceTimeline" data-animate="fade-up" data-delay="100">
+                <!-- Experience items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Education</h2>
+            <div class="education-grid" id="educationGrid" data-animate="fade-up" data-delay="100">
+                <!-- Education items will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Resume</h2>
+            <div class="resume-content" data-animate="fade-up" data-delay="100">
+                <p class="resume-description">
+                    Download my complete resume to learn more about my experience, education, and achievements.
+                </p>
+                <a href="Assets/resume/resume.pdf" class="btn btn-primary btn-large" target="_blank" rel="noopener noreferrer">
+                    View Resume PDF
+                </a>
+                <div class="resume-summary" id="resumeSummary">
+                    <!-- Resume summary cards will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-animate="fade-up">Get In Touch</h2>
+            <div class="contact-content" data-animate="fade-up" data-delay="100">
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required aria-required="true">
+                        <span class="error-message" id="nameError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required aria-required="true">
+                        <span class="error-message" id="emailError"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links" id="socialLinks">
+                    <!-- Social links will be dynamically inserted from script.js -->
+                </div>
+                <p class="copyright">&copy; <span id="currentYear"></span> Arsh Patel. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast" role="alert" aria-live="polite">
+        <span class="toast-message" id="toastMessage"></span>
+    </div>
+
+    <!-- Admin Login Modal -->
+    <div class="modal" id="adminLoginModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeLoginModal">&times;</span>
+            <h2>Admin Login</h2>
+            <form id="adminLoginForm">
+                <div class="form-group">
+                    <label for="adminPassword">Password</label>
+                    <input type="password" id="adminPassword" required autocomplete="off">
+                    <small>Enter your admin password to access the management panel</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Admin Panel Modal -->
+    <div class="modal" id="adminPanelModal">
+        <div class="modal-content admin-panel">
+            <span class="modal-close" id="closeAdminPanel">&times;</span>
+            <div class="admin-panel-header">
+                <h2>Admin Panel</h2>
+                <button class="btn btn-secondary btn-logout" id="logoutBtn">Logout</button>
+            </div>
+            <div class="admin-tabs">
+                <button class="admin-tab active" data-tab="projects">Projects</button>
+                <button class="admin-tab" data-tab="skills">Skills</button>
+                <button class="admin-tab" data-tab="experience">Experience</button>
+                <button class="admin-tab" data-tab="education">Education</button>
+            </div>
+
+            <!-- Projects Tab -->
+            <div class="admin-tab-content active" id="tab-projects">
+                <h3>Manage Projects</h3>
+                <button class="btn btn-primary" id="addProjectBtn">Add New Project</button>
+                <div class="admin-items-list" id="projectsList"></div>
+            </div>
+
+            <!-- Skills Tab -->
+            <div class="admin-tab-content" id="tab-skills">
+                <h3>Manage Skills</h3>
+                <button class="btn btn-primary" id="addSkillBtn">Add New Skill Category</button>
+                <div class="admin-items-list" id="skillsList"></div>
+            </div>
+
+            <!-- Experience Tab -->
+            <div class="admin-tab-content" id="tab-experience">
+                <h3>Manage Experience</h3>
+                <button class="btn btn-primary" id="addExperienceBtn">Add New Experience</button>
+                <div class="admin-items-list" id="experienceList"></div>
+            </div>
+
+            <!-- Education Tab -->
+            <div class="admin-tab-content" id="tab-education">
+                <h3>Manage Education</h3>
+                <button class="btn btn-primary" id="addEducationBtn">Add New Education</button>
+                <div class="admin-items-list" id="educationList"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Form Modal -->
+    <div class="modal" id="projectFormModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeProjectForm">&times;</span>
+            <h2 id="projectFormTitle">Add Project</h2>
+            <form id="projectForm">
+                <input type="hidden" id="projectIndex">
+                <div class="form-group">
+                    <label for="projectTitle">Title *</label>
+                    <input type="text" id="projectTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Description *</label>
+                    <textarea id="projectDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectTags">Tags (comma-separated) *</label>
+                    <input type="text" id="projectTags" placeholder="e.g., AI, Web, Data" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectCategory">Category *</label>
+                    <select id="projectCategory" required>
+                        <option value="Data">Data</option>
+                        <option value="Web">Web</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="projectLinks">Links (JSON format, optional)</label>
+                    <textarea id="projectLinks" rows="3" placeholder='[{"label": "GitHub", "url": "https://..."}]'></textarea>
+                    <small>Leave empty if no links</small>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" id="cancelProjectForm">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Skill Form Modal -->
+    <div class="modal" id="skillFormModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeSkillForm">&times;</span>
+            <h2 id="skillFormTitle">Add Skill Category</h2>
+            <form id="skillForm">
+                <input type="hidden" id="skillIndex">
+                <div class="form-group">
+                    <label for="skillCategory">Category Name *</label>
+                    <input type="text" id="skillCategory" required>
+                </div>
+                <div class="form-group">
+                    <label for="skillItems">Skills (one per line) *</label>
+                    <textarea id="skillItems" rows="6" required placeholder="Python&#10;JavaScript&#10;React"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" id="cancelSkillForm">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Experience Form Modal -->
+    <div class="modal" id="experienceFormModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeExperienceForm">&times;</span>
+            <h2 id="experienceFormTitle">Add Experience</h2>
+            <form id="experienceForm">
+                <input type="hidden" id="experienceIndex">
+                <div class="form-group">
+                    <label for="expTitle">Title *</label>
+                    <input type="text" id="expTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="expCompany">Company *</label>
+                    <input type="text" id="expCompany" required>
+                </div>
+                <div class="form-group">
+                    <label for="expLocation">Location *</label>
+                    <input type="text" id="expLocation" required>
+                </div>
+                <div class="form-group">
+                    <label for="expDate">Date Range *</label>
+                    <input type="text" id="expDate" placeholder="e.g., Jan 2024 – Present" required>
+                </div>
+                <div class="form-group">
+                    <label for="expDescription">Description *</label>
+                    <textarea id="expDescription" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="expHighlights">Highlights (one per line)</label>
+                    <textarea id="expHighlights" rows="5" placeholder="Highlight 1&#10;Highlight 2&#10;Highlight 3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" id="cancelExperienceForm">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Education Form Modal -->
+    <div class="modal" id="educationFormModal">
+        <div class="modal-content">
+            <span class="modal-close" id="closeEducationForm">&times;</span>
+            <h2 id="educationFormTitle">Add Education</h2>
+            <form id="educationForm">
+                <input type="hidden" id="educationIndex">
+                <div class="form-group">
+                    <label for="eduDegree">Degree *</label>
+                    <input type="text" id="eduDegree" required placeholder="e.g., Master's in Artificial Intelligence">
+                </div>
+                <div class="form-group">
+                    <label for="eduSchool">School / University *</label>
+                    <input type="text" id="eduSchool" required>
+                </div>
+                <div class="form-group">
+                    <label for="eduLocation">Location *</label>
+                    <input type="text" id="eduLocation" required>
+                </div>
+                <div class="form-group">
+                    <label for="eduDate">Date Range *</label>
+                    <input type="text" id="eduDate" required placeholder="e.g., Aug 2025 – Sept 2026">
+                </div>
+                <div class="form-group">
+                    <label for="eduCoursework">Relevant Coursework *</label>
+                    <textarea id="eduCoursework" rows="4" required placeholder="e.g., AI in Business, Data Analytics, Machine Learning"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                    <button type="button" class="btn btn-secondary" id="cancelEducationForm">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Chatbot Widget -->
+    <button class="chatbot-toggle" id="chatbotToggle" aria-label="Open Nova chat">
+        <span class="chatbot-toggle-icon">💬</span>
+    </button>
+
+    <section class="chatbot" id="chatbot" aria-label="Nova AI chat" aria-live="polite">
+        <div class="chatbot-header">
+            <div>
+                <h2 class="chatbot-title">Nova</h2>
+                <p class="chatbot-subtitle">Ask me about Arsh, his skills, projects, or experience.</p>
+            </div>
+            <button class="chatbot-close" id="chatbotClose" aria-label="Close Nova chat">&times;</button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages" role="log"></div>
+        <form class="chatbot-input-row" id="chatbotForm">
+            <label class="visually-hidden" for="chatbotInput">Ask a question</label>
+            <input
+                type="text"
+                id="chatbotInput"
+                class="chatbot-input"
+                placeholder="Ask about skills, projects, experience..."
+                autocomplete="off"
+                required
+            />
+            <button type="submit" class="btn btn-primary chatbot-send">Send</button>
+        </form>
+        <p class="chatbot-note">
+            Nova runs locally and uses the information on this page. It doesn’t send your data anywhere.
+        </p>
+    </section>
+
+<script src="script.js" defer></script>
+</body>
+</html>
+
